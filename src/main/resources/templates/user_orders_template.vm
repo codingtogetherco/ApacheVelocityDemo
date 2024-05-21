@@ -1,0 +1,27 @@
+## Plantilla de ejemplo para generar una respuesta JSON
+## Variables esperadas:
+## - $status: Estado de la operación (String)
+## - $message: Mensaje de la operación (String)
+## - $user: Objeto de tipo User con las propiedades 'name', 'age', y 'email'
+## - $orders: Lista de objetos Order con las propiedades 'id', 'product', 'amount', y 'unitaryPrice'
+
+{
+    "estado": "$nuevonombre",
+    "mensaje": "$message",
+    "usuario": {
+        "nombre": "$user.name",
+        "edad": $user.age,
+        "email": "$user.email"
+    },
+    "pedidos": [
+        #foreach($order in $orders)
+        {
+            "id": $order.id,
+            "producto": "$order.product",
+            "cantidad": $order.amount,
+            "precio_unitario": $order.unitaryPrice
+        }
+        #if($foreach.hasNext),#end
+        #end
+    ]
+}

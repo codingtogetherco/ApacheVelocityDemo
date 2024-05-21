@@ -1,0 +1,23 @@
+{
+  "status": "success",
+  "message": "Data retrieved successfully",
+  "user": {
+    "name": "John Doe",
+    "age": 30,
+    "email": "john.doe@example.com"
+  },
+  "orders": [
+    {
+      "id": 1,
+      "product": "Shirt",
+      "amount": 2,
+      "unitaryPrice": 25.0
+    },
+    {
+      "id": 2,
+      "product": "Pants",
+      "amount": 1,
+      "unitaryPrice": 35.0
+    }
+  ]
+}
